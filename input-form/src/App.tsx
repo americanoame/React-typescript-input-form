@@ -5,7 +5,7 @@ function App() {
   
   return (
     <main>
-     <Container as={Button} />
+     <Container as={Button}>Click</Container>
     </main>
   );
 }
