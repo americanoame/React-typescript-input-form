@@ -9,10 +9,15 @@ import Button from './components/Button.tsx';
 // and the Button for layout and structure.
 
 function App() {
+
+  function handleSave(data: unknown) {
+    const extractedData = data as { name: string; age: string };
+    console.log(extractedData);
+  }
   return (
     <main>
-      <Form>
-        <Input type='text' label='name' id='name' />
+      <Form onSave={handleSave}>
+        <Input type='text' label='name' id='name'  />
         <Input type='number' label='age' id='age'></Input>
         <p>
           <Button>Save</Button>
